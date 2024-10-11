@@ -101,13 +101,11 @@ staff_long
 
 ```{r dot-plot}
 
-ggplot(data = staff_long %>% mutate(year = as.numeric(year)),
+ggplot(data = staff_long,
        mapping = aes(x = year, 
                      y = percent, 
-                     colour = faculty_type)) + 
-  geom_point() +
-  geom_line()
-
+                     colour = faculty_type)) +
+  geom_point()
 
 
 
@@ -118,6 +116,12 @@ ggplot(data = staff_long %>% mutate(year = as.numeric(year)),
 ```{r bad-line-plot}
 # Write your code for Exercise 4 here
 
+ggplot(data = staff_long %>% mutate(year = as.numeric(year)),
+       mapping = aes(x = year, 
+                     y = percent, 
+                     colour = faculty_type)) + 
+  geom_point() +
+  geom_line()
 
 
 ```
@@ -129,12 +133,25 @@ ggplot(data = staff_long %>% mutate(year = as.numeric(year)),
 
 #staff_long <- staff_long %>%
 #  mutate(year = ______(year))
+
+ggplot(data = staff_long %>% mutate(year = as.numeric(year)),
+       mapping = aes(x = year, 
+                     y = percent, 
+                     colour = faculty_type)) + 
+  geom_point() +
+  geom_line()
+
 ```
 
 
 ```{r working-line-plot}
 # Write your code for Exercise 5 here
-
+ggplot(data = staff_long %>% mutate(year = as.numeric(year)),
+       mapping = aes(x = year, 
+                     y = percent, 
+                     colour = faculty_type)) + 
+  geom_point() +
+  geom_line()
 
 
 ```
@@ -143,6 +160,14 @@ ggplot(data = staff_long %>% mutate(year = as.numeric(year)),
 
 ```{r better-line-plot}
 # Write your code for Exercise 6 here
+ggplot(data = staff_long %>% mutate(year = as.numeric(year)),
+       mapping = aes(x = year, 
+                     y = percent, 
+                     colour = faculty_type)) + 
+  geom_point() +
+  geom_line() +
+  labs(title = "Trends in Instructional Staff Employment Status",
+       colour = "Faculty type")
 
 
 
