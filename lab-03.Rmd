@@ -188,8 +188,21 @@ _Write below your ideas for adapting the line plot_
 
 ```{r implement-Ex7}
 # Write your code for Exercise 8 here
+ggplot(data = staff_long %>% mutate(year = as.numeric(year)), 
+       mapping = aes(
+         x = year,
+         fill = percent
+         )) +
+  geom_density(
+    alpha = 0.5
+    ) +
+  labs(
+    x = "Year",
+    y = "Percent",
+    title = "Trends in Instructional Staff Employment Status")
 
 
-
+```
+```{r}
 ```
 
